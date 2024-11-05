@@ -6,6 +6,14 @@ Project programming languages: Python, R, and FORTRAN
 
 Input data used in this project are available from the weblink in the manuscript. Upon publication, a link to the dataset and DOI will be made available here.
 
+## Data requirements
+All raw data used in this study are publicly available. 
+- AVHRR GAC Level 1B data are available at: http://catalogue.ceda.ac.uk/uuid/b0e6eb5efa623c837d10a233256cc9ce.
+- Daily maximum VPD data from Jain et al., (2021) are available at: 560 https://zenodo.org/record/5567062#.Yt_VeHbMJD8.
+- Fire weather data analysed from the NASA Global Fire Weather Database (GFWED) (v2.0) are available at: https://data.giss.nasa.gov/impacts/gfwed/ and the Copernicus Emergency Management Service for the European Forest Fire Information System (CEMS-EFFIS) fire danger indices historical dataset (v3.1) is available at https://doi.org/10.24381/cds.0e89c522.
+- Study regions (aka ‘GFED basis regions’) are available at: https://www.globalfiredata.org/.
+- The masking process used to screen out non-fire activity uses the MODIS landcover 2016 dataset available at: https://doi.org/10.5067/MODIS/MCD12C1.006 and the Global Volcanism Program database (v4.11.0) available at: https://doi.org/10.5479/si.GVP.VOTW4-2013 
+
 ## Structure of this repository
 ## /lib
 common python scripts containing paths and functions used throught the project.
