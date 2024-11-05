@@ -4,7 +4,7 @@ AVHRR L1B imagery fire detection algorithms and data analysis.
 
 Project programming languages: Python, R, and FORTRAN
 
-Input data used in this project are available from the weblink in the manuscript. Upon publication, a link to the dataset and DOI will be made available here.
+The processed active fire 'hotspot' data generated and analysed by this code are available to reviewers from the weblink in the manuscript. Upon publication, a link to the dataset and DOI will be made available here.
 
 ## Data requirements
 All raw data used in this study are publicly available. 
