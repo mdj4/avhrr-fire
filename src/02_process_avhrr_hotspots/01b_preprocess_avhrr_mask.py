@@ -26,6 +26,9 @@ from osgeo import gdal
 
 #custom
 sys.path.append('./../../lib')
+sys.path.append(str(Path(__file__).resolve().parent.parent.parent / 'lib'))
+print(sys.path)
+
 import paths as paths
 from utils import round_with_5_offset
 
@@ -225,6 +228,11 @@ print(val2/val1*100,'% of all fires remain after applying drop_duplicates()')
 # SAVE AVHRR MASKED DATA TO DISK AS A SINGLE FILE
 # merge operations seem to convert month and year fields to floats. convert back.
 df_full = df_full.astype({"year": 'int', "month": 'int', "doy": 'int'})
+#df_full.to_csv(dir_out / 'avhrr_hotspots_masked.csv', index=False)
+
+
+# NEW: OUTPUT TO TEST B3 285 FILTER ***
+df_full = df_full.loc[df_full['b3'] > 285]
 df_full.to_csv(dir_out / 'avhrr_hotspots_masked.csv', index=False)
 
-
+print("\nFinished")

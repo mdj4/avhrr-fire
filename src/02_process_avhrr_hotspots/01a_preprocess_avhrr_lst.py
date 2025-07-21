@@ -9,6 +9,8 @@ from datetime import datetime, time, timedelta
 
 # load custom functions
 sys.path.append('./../../lib')
+sys.path.append(str(Path(__file__).resolve().parent.parent.parent / 'lib'))
+print(sys.path)
 import paths as paths
 import utils as utils
 

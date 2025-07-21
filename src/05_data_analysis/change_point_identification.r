@@ -23,6 +23,7 @@ library(trend)
 # AVHRR ANF and FWSL (GFED REGIONS)
 # =============================
 dir_base = "/path/to/working/directory"
+dir_base = "C:/Users/mdejong/OneDrive - NRCan RNCan/projects/avhrr/publication_data_285k/"
 fp = paste0(dir_base, 'avhrr_and_fire_weather_fulljoin_1986-2016.csv')
 fp_out = paste0(dir_base, 'change_points/')
 
@@ -446,7 +447,7 @@ rm(df_results)
 fp = paste0(dir_base, 'GFED_fire_season_length.csv')
 fp_out = paste0(dir_base, 'change_points/')
 
-df_season = as_tibble(as.data.frame(fread(fp)))
+df_season = as_tibble(as.data.frame(fread(file=fp)))
 
 fp = paste0(fp_out, 'avhrr_seasonlength_breakpoints_gfed.png')
 png(filename =  fp, res = 300, width = 8, height = 12, units = 'in')
@@ -516,7 +517,7 @@ rm(df_results)
 fp = paste0(dir_base, 'GFED_peak_fire_activity_magnitude.csv')
 fp_out = paste0(dir_base, 'change_points/')
 
-df_peak = as_tibble(as.data.frame(fread(fp)))
+df_peak = as_tibble(as.data.frame(fread(file=fp)))
 
 fp = paste0(fp_out, 'avhrr_pfam_breakpoints_gfed.png')
 png(filename =  fp, res = 300, width = 8, height = 12, units = 'in')

@@ -14,6 +14,9 @@ import pandas as pd
 
 #custom
 sys.path.append('./../../lib')
+sys.path.append(str(Path(__file__).resolve().parent.parent.parent / 'lib'))
+print(sys.path)
+
 import paths as paths
 import utils as utils
 
@@ -360,8 +363,7 @@ df_ttb.to_csv(dir_base / f'TempTropBoreal_annual_counts_calendaryr.csv', index=F
 
 df_cp2.to_csv(dir_base / 'GFED_{0}day_cp_counts_calendaryr_{1}_season_{2}_{3}.csv'.format(f[0], f[1], f[2], f[3]), index=False)
 
-# this output not used right now
-# profile_seas.to_csv(dir_base / 'GFED_{0}day_cp_average_profile_{1}_season_{2}_{3}.csv'.format(f[0], f[1], f[2], f[3]), index=False)
+profile_seas.to_csv(dir_base / 'GFED_{0}day_cp_average_profile_{1}_season_{2}_{3}.csv'.format(f[0], f[1], f[2], f[3]), index=False)
 
 profile_summary.to_csv(dir_base / 'GFED_{0}day_cp_average_profile_summary_{1}_season_{2}_{3}.csv'.format(f[0], f[1], f[2], f[3]), index=False)
 
