@@ -750,6 +750,10 @@ if __name__ == "__main__":
         df_orbit_pixel, df_orbit_summary = process_orbit(fp=fp,
                                                          conf_vars=conf_vars,
                                                          do_fire_detection=do_fire_detection)
+        
+        # final absolute 285K filter
+        df_orbit_pixel = df_orbit_pixel.loc[df_orbit_pixel['b3'] > 285]
+
         # output fire data
         fn_out = fp.split('/')[-1][:-3]
         df_orbit_pixel.to_csv(dir_out + fn_out + '_pixel.csv', index=False)

@@ -231,7 +231,7 @@ df_full = df_full.astype({"year": 'int', "month": 'int', "doy": 'int'})
 #df_full.to_csv(dir_out / 'avhrr_hotspots_masked.csv', index=False)
 
 
-# NEW: OUTPUT TO TEST B3 285 FILTER ***
+# NEW: CONFIRM B3 285K FILTERED ***
 df_full = df_full.loc[df_full['b3'] > 285]
 df_full.to_csv(dir_out / 'avhrr_hotspots_masked.csv', index=False)
 
